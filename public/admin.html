@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel - Express Diner</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <nav class="navbar" id="navbar"></nav>
+
+  <div class="container">
+    <h1 class="page-title">⚙️ Admin Panel</h1>
+    <p class="page-subtitle">Manage registered accounts and view all system orders</p>
+
+    <div id="alertBox"></div>
+
+    <!-- User Management Section -->
+    <div style="margin-bottom: 3rem;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+        <h2>👥 Registered Users</h2>
+        <button onclick="loadUsers()" class="btn btn-secondary btn-sm">🔄 Refresh Users</button>
+      </div>
+
+      <div class="table-card">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Username</th>
+              <th>Email</th>
+              <th>Role</th>
+              <th>Status</th>
+              <th style="text-align: right;">Action</th>
+            </tr>
+          </thead>
+          <tbody id="usersTableBody">
+            <tr>
+              <td colspan="6" style="text-align: center; color: var(--text-muted);">Loading users...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- All Orders Section -->
+    <div>
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+        <h2>📦 All Customer Orders</h2>
+        <button onclick="loadAllOrders()" class="btn btn-secondary btn-sm">🔄 Refresh Orders</button>
+      </div>
+
+      <div id="adminOrdersContainer" class="orders-list">
+        <p style="color: var(--text-muted);">Loading all orders...</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Course Assignment Project &bull; Restaurant Ordering App &bull; Built with Express & PostgreSQL</p>
+  </footer>
+
+  <script src="/js/common.js"></script>
+  <script src="/js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log In - Express Diner</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <nav class="navbar" id="navbar"></nav>
+
+  <div class="container">
+    <div class="auth-card">
+      <h2 class="page-title" style="text-align: center; margin-bottom: 0.5rem;">Welcome Back</h2>
+      <p class="page-subtitle" style="text-align: center;">Log in to place orders or manage your account</p>
+
+      <div id="alertBox"></div>
+
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="usernameOrEmail">Username or Email</label>
+          <input type="text" id="usernameOrEmail" class="form-control" placeholder="Enter username or email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" class="form-control" placeholder="Enter password" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Log In</button>
+      </form>
+
+      <p style="text-align: center; margin-top: 1.25rem; font-size: 0.9rem; color: var(--text-muted);">
+        Don't have an account? <a href="/signup.html" style="color: var(--primary); font-weight: 600;">Sign Up</a>
+      </p>
+
+      <div class="demo-box">
+        <h4>⚡ Quick Demo Accounts:</h4>
+        <div class="demo-buttons">
+          <button type="button" onclick="quickLogin('user', 'user123')" class="btn btn-secondary btn-sm">👤 User</button>
+          <button type="button" onclick="quickLogin('chef', 'chef123')" class="btn btn-secondary btn-sm">👨‍🍳 Chef</button>
+          <button type="button" onclick="quickLogin('admin', 'admin123')" class="btn btn-secondary btn-sm">⚙️ Admin</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Course Assignment Project &bull; Restaurant Ordering App &bull; Built with Express & PostgreSQL</p>
+  </footer>
+
+  <script src="/js/common.js"></script>
+  <script src="/js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Orders - Express Diner</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <nav class="navbar" id="navbar"></nav>
+
+  <div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+      <h1 class="page-title" style="margin-bottom: 0;">My Orders</h1>
+      <button onclick="loadMyOrders()" class="btn btn-secondary btn-sm">🔄 Refresh Orders</button>
+    </div>
+    <p class="page-subtitle">Track the status of your current and past food orders</p>
+
+    <div id="alertBox"></div>
+
+    <div id="ordersContainer" class="orders-list">
+      <p style="color: var(--text-muted);">Loading your orders...</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>Course Assignment Project &bull; Restaurant Ordering App &bull; Built with Express & PostgreSQL</p>
+  </footer>
+
+  <script src="/js/common.js"></script>
+  <script src="/js/my-orders.js"></script>
+</body>
+</html>

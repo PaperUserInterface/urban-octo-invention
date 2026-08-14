@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chef Panel - Express Diner</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <nav class="navbar" id="navbar"></nav>
+
+  <div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+      <h1 class="page-title" style="margin-bottom: 0;">👨‍🍳 Kitchen Order Management</h1>
+      <button onclick="loadChefOrders()" class="btn btn-secondary btn-sm">🔄 Refresh Orders</button>
+    </div>
+    <p class="page-subtitle">View placed orders and update status (Pending → Preparing → Ready)</p>
+
+    <div id="alertBox"></div>
+
+    <div id="chefOrdersContainer" class="orders-list">
+      <p style="color: var(--text-muted);">Loading kitchen orders...</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>Course Assignment Project &bull; Restaurant Ordering App &bull; Built with Express & PostgreSQL</p>
+  </footer>
+
+  <script src="/js/common.js"></script>
+  <script src="/js/chef.js"></script>
+</body>
+</html>
